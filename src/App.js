@@ -59,21 +59,21 @@ function App() {
                 "These guys were fantastic...They don't cut corners and do high
                 quality work. They also kept everything clean as much as
                 possible and cleaned up after. The work looks great and we are
-                some happy customers. "<p>-Natasha P. (07/06/2020)</p>
+                some happy customers. "<p>-Natasha P. 07/06/2020</p>
               </p>
               <p className="blockquote">
                 "... As good as it gets! Didn't play games or try to charge
                 extra. The quality was good and they worked fast. Bid was one of
                 the lower ones, quality was one of the best! Will be using
                 again."
-                <p>-Laura B. (08/26/2020)</p>
+                <p>-Laura B. 08/26/2020</p>
               </p>
               <p className="blockquote">
                 "Bernardo and his team are a class act. No slacking here. His men
                 worked extremely hard non-stop from the time they got to my
                 house until they left. The quality to detail is the icing on the
                 cake. Bernardo is a perfectionist...""
-                <p>-Ross U. (03/29/2017)</p>
+                <p>-Ross U. 03/29/2017</p>
               </p>
               <a href="#gallery">Reviews</a>
             </div>
