@@ -82,21 +82,13 @@ function App() {
             </div>
           </section>
           <section className="hero">
-            <div className="hero-images"></div>
-            <div className=" hero-introduction flex">
-              <img src={logo} alt="company-logo" className="hero-logo" />
+            <div className=" hero-introduction3 flex">
+              {/* <img src={logo} alt="company-logo" className="hero-logo" /> */}
               {/* <h2>Speedy Gonzalez <br/>Drywall & Taping Inc.</h2> */}
-              <p>
-                With 7 years of operation, Speedy Gonzalez is a reputable
-                commercial and residential construction company especializing in
-                both drywall and painting treatments. Our team is committed to a
-                high standard of quality and integrity through both our
-                incomparable services and devotion. Take a look and see for
-                yourself why Speedy Gonzalez is sought after time and time
-                again.
-              </p>
-              <a href="#gallery">Gallery</a>
+              
+              {/* <a href="#gallery">Gallery</a> */}
             </div>
+            <div className="hero-images3"></div>
           </section>
         </main>
 
