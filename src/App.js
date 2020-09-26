@@ -1,14 +1,8 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 import Services from './components/services';
-import LandingPage from './components/landingPage'
+import LandingPage from './components/landingpage';
 import logoHorizontal from './icons/logoHorizontal.png';
-import painter from './icons/painter.png';
-import logoVertical from './icons/logoVertical.png';
-import logo from './icons/logo.png';
-import drywall from './icons/drywall2.png';
-import paintSupplies from './icons/paintSupplies.png';
-import framing from './icons/framing.png';
 import './style.css';
 
 function App() {
@@ -18,11 +12,13 @@ function App() {
         <header className="main-head">
           <nav>
             <h1 id="logo">
-              <img
-                src={logoHorizontal}
-                className="nav-logo"
-                alt="company-logo"
-              />
+              <a href='/'> 
+                <img
+                  src={logoHorizontal}
+                  className="nav-logo"
+                  alt="company-logo"
+                />
+              </a>
             </h1>
             <ul className="nav-links">
               <li>
@@ -41,10 +37,9 @@ function App() {
           </nav>
         </header>
         <Switch>
-        <Route exact path="/" component={LandingPage} />
+          <Route exact path="/" component={LandingPage} />
           <Route exact path="/services" component={Services} />
         </Switch>
-        
       </body>
     </div>
   );
