@@ -131,7 +131,6 @@ nav {
   text-align: center;
   background: #2b2b2b;
   color: white;
- 
 }
 .hero-introduction p {
   padding: 5rem 10rem;
@@ -142,10 +141,73 @@ nav {
   padding-top: 3rem;
 }
 .hero-introduction a,
-.hero-introduction2 a {
+.hero-introduction3 a {
   padding: 2rem 8rem;
-border: black 3px solid;
+  border: black 3px solid;
   margin-bottom: 4rem;
+}
+
+.hero-images {
+  flex: 1 1 40rem;
+  background: url('./images/paintbrush-4577578_1920.jpg');
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+.hero-images2 {
+  flex: 1 1 40rem;
+  background: linear-gradient(#59c65b, #dad1d4);
+  position: relative;
+  z-index: 1;
+}
+.hero2 a, .hero3 a {
+  padding: 2rem 8rem;
+  color: white;
+  border: 3px solid white;
+}
+
+.hero3 {
+  min-height: 160vh;
+  /* width: 95%; */
+  margin: auto;
+  /* display: flex; */
+  flex-wrap: wrap;
+  overflow: hidden;
+  background: linear-gradient(#59c65b, #2b2b2b);
+  text-align: center;
+}
+.hero-introduction3 {
+   min-height: 90vh;
+    flex-direction: row;
+}
+
+.hero-introduction3 div {
+    background: #f7f7f7;
+    display: flex;
+    width: 300px;
+    height: 400px;
+    flex-direction: column;
+    margin: 5rem;
+    box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1),
+    0px 20px 20px rgba(0, 0, 0, 0.1);
+}
+.hero-introduction3 div:hover {
+    background: #dad1d4;
+    border: 3px black solid;
+}
+.hero3 h2 {
+  margin-top: 7rem;
+  font-size: 7rem;
+}
+.hero3 p {
+    padding: 0rem 10rem;
+    width: 80%;
+  margin: auto;
+}
+.hero-introduction3 img {
+  height: 250px;
 }
 .blockquote {
   font: 26px italic Times, serif;
@@ -163,25 +225,6 @@ border: black 3px solid;
   line-height: 2rem;
 }
 
-.hero-images {
-  flex: 1 1 40rem;
-  background: url('./images/paintbrush-4577578_1920.jpg');
-  background-position: center;
-  background-size: cover;
-  background-repeat: no-repeat;
-  position: relative;
-  z-index: 1;
-}
-.hero2 a{
-    color:white;
-    border: 3px solid white;
-}
-.hero-images2 {
-  flex: 1 1 40rem;
-  background: linear-gradient(#59c65b, #dad1d4);
-  position: relative;
-  z-index: 1;
-}
 .hero-painter {
   width: 100%;
   height: 100%;
