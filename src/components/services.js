@@ -1,39 +1,15 @@
 import React from 'react';
-import logoHorizontal from './icons/logoHorizontal.png';
-import painter from './icons/painter.png';
-import logoVertical from './icons/logoVertical.png';
-import logo from './icons/logo.png';
+import logoHorizontal from '../icons/logoHorizontal.png';
+import painter from '../icons/painter.png';
+import logoVertical from '../icons/logoVertical.png';
+import logo from '../icons/logo.png';
 
-import './style.css';
-function App() {
+import '../style.css';
+function Services() {
   return (
     <div className="App">
       <body>
-        <header className="main-head">
-          <nav>
-            <h1 id="logo">
-              <img
-                src={logoHorizontal}
-                className="nav-logo"
-                alt="company-logo"
-              />
-            </h1>
-            <ul className="nav-links">
-              <li>
-                <a href="#about">About</a>
-              </li>
-              <li>
-                <a href="#services">Services</a>
-              </li>
-              <li>
-                <a href="#reviews">Reviews</a>
-              </li>
-              <li>
-                <a href="#account">Account</a>
-              </li>
-            </ul>
-          </nav>
-        </header>
+        
         <main>
           <section className="hero">
             <div className="hero-images"></div>
@@ -74,4 +50,4 @@ function App() {
   );
 }
 
-export default App;
+export default Services;
