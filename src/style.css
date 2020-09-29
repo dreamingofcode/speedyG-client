@@ -387,7 +387,7 @@ nav {
 .services img {
   max-height: 500px;
   max-width: 500px;
-  cursor:pointer ;
+  cursor: pointer;
 }
 
 .services-card {
@@ -402,15 +402,24 @@ nav {
   box-shadow: 20px 20px 10px rgba(0, 0, 0, 0.1),
     0px 20px 20px rgba(0, 0, 0, 0.1);
 }
+/* slider portion */
 .service-images {
   position: relative;
   z-index: 1;
   display: flex;
-  justify-content: center;
+width: 180vh;
+} 
+
+.service-images div {
+  display: flex;
   align-items: center;
 }
-.service-images h3{
-    color: white;
+.service-images h3 {
+  color: white;
+}
+.slider-image{
+  height: 450px;
+  width: auto;
 }
 .services-card img {
   height: 300px;
@@ -426,8 +435,8 @@ nav {
   width: 80px;
   cursor: pointer;
 }
-.previous-arrow{
-    transform: rotateY(180deg);
+.previous-arrow {
+  transform: rotateY(180deg);
 }
 
 .services h2 {
@@ -439,16 +448,25 @@ nav {
   font-family: var(--stencil-font);
   font-size: 5rem;
 }
-.services-framing, .services-drywall, .services-painting {
+.services h4 {
+  color: white;
+  /* font-family: var(--stencil-font); */
+  font-size: 5rem;
+}
+
+.services-framing,
+.services-drywall,
+.services-painting {
   min-height: 110vh;
   margin: auto;
   display: flex;
   flex-wrap: wrap;
   overflow: hidden;
 }
+/* text portion */
 .services-introduction,
 .services-introduction2 {
-  flex: 40rem 2 1;
+  flex: 40rem 1 2;
   text-align: center;
   background: linear-gradient(#2b2b2b, #dad1d4);
   background-position: bottom;
@@ -467,7 +485,6 @@ nav {
   width: 78%;
   margin-top: 3rem;
   position: relative;
-  
 }
 .services-drywall {
   min-height: 90vh;

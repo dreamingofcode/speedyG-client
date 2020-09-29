@@ -32,6 +32,7 @@ function Services() {
       <section className="services-framing">
         <div className=" services-introduction flex">
           {' '}
+          <h3>Framing & Carpentry</h3>
           <p>
             Framing refers to the process of building a supportive and skeletal
             structure to give shape and a foundational support to other building

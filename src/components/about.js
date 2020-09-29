@@ -43,22 +43,21 @@ function About() {
       </section>
       <section className="about">
         <div className="about-text2 flex">
-          <h3>Our Leader</h3>
+          <h3>Our Team</h3>
           <div className="about-story">
             <p>
-              Speedy Gonzalez Drywall & Taping Inc was founded by Frank Mota
-              back in 2009. Frank and his crew quickly became well known in the
-              chicagoland area due to their committment to their work and
-              expertise.
+              Founder and president, Frank Mota, is without a doubt one of the
+              most hard working individuals you will ever meet. He has been
+              working in the remodeling and construction industry for 15 years
+              and is well versed aside from being a genuine individual. His
+              priority is both his employees and his customers alike. He is
+              known for going above and beyond as he is a perfectionist at
+              heart.
             </p>
           </div>
           <div className="about-story">
             <p>
-              The Company is well versed in many remodeling and repair
-              procedures for both Commercial and Residential projects. Our top
-              priority is our customer's satisfaction, therefore, Speedy's team
-              is made up of true specialist. Individuals specialize in a
-              specific trade and are
+            
             </p>
           </div>
           <div className="about-story">
@@ -70,7 +69,6 @@ function About() {
           </div>
         </div>
         <div className="about-image2">
-    
           <img src={frank} alt="franks-headshot" />
           <p>Frank Mota</p>
           <img src={frank} alt="franks-headshot" />
