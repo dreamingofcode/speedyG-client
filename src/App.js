@@ -1,18 +1,19 @@
 import React from 'react';
 import { Route, Switch } from 'react-router-dom';
-import Services from './components/services';
 import LandingPage from './components/landingpage';
+import About from './components/about'
+import Services from './components/services';
 import logoHorizontal from './icons/logoHorizontal.png';
 import './style.css';
 
 function App() {
   return (
     <div className="App">
-      <body>
+
         <header className="main-head">
           <nav>
             <h1 id="logo">
-              <a href='/'> 
+              <a href="/">
                 <img
                   src={logoHorizontal}
                   className="nav-logo"
@@ -20,9 +21,10 @@ function App() {
                 />
               </a>
             </h1>
+            <input type="checkbox" className="menu-check"/>
             <ul className="nav-links">
               <li>
-                <a href="#about">About</a>
+                <a href="/about">About</a>
               </li>
               <li>
                 <a href="/services ">Services</a>
@@ -34,10 +36,18 @@ function App() {
                 <a href="#account">Account</a>
               </li>
             </ul>
+            <div className="burger">
+              <span></span>
+              <span></span>
+              <span></span>
+       
+            </div>
           </nav>
         </header>
+        <body>
         <Switch>
           <Route exact path="/" component={LandingPage} />
+          <Route exact path="/about" component={About} />
           <Route exact path="/services" component={Services} />
         </Switch>
       </body>
