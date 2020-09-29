@@ -53,7 +53,6 @@ function LandingPage() {
           <div className="hero-images2">
             <img src={painter} className="hero-painter" alt="painter" />
           </div>
-        </section>
         <section className="hero3">
           <h2>Services</h2>
           <p>
@@ -68,17 +67,53 @@ function LandingPage() {
               <img src={framing} alt="stack-of-drywall" />
               <h1>Carpentry & Framing</h1>
             </div>
+            <span className="landing-carpentry2">
+              <ul>
+                <li>New additions</li>
+                <li>Soffits</li>
+                <li>Basements</li>
+                <li>Walls & partitions</li>
+                <li>Window installation</li>
+                <li>Door installation</li>
+                <li>Casing & moldings</li>
+                <li>Wood staining</li>
+
+              </ul>
+            </span>
             <div className="landing-drywall">
               <img src={drywall} alt="stack-of-drywall" />
               <h1>Drywall & Taping</h1>
             </div>
+            <span className="landing-drywall2">
+              <ul>
+                <li>Plastering</li>
+                <li>Taping</li>
+                <li>Sanding</li>
+                <li>Skim coating</li>
+                <li>Hole repairs</li>
+                <li>Wallpaper removal</li>
+                <li>Water damage treatment</li>
+                <li></li>
+              </ul>
+            </span>
             <div className="landing-painting">
               <img src={paintSupplies} alt="stack-of-drywall" />
 
               <h1>Painting & Finishing</h1>
-            </div>
+            </div>{' '}
+            <span className="landing-painting2">
+              <ul>
+                <li>Interior & exterior</li>
+                <li>Priming</li>
+                <li>Caulking & Prep</li>
+                <li>Color matching</li>
+                <li>Carpentry & wood staining</li>
+              </ul>
+            </span>
           </div>
+
           <a href="/services">Services</a>
+        </section>
         </section>
       </main>
 
