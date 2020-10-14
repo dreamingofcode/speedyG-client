@@ -48,72 +48,79 @@ function LandingPage() {
               Bernardo is a perfectionist...""
               <p>-Ross U. 03/29/2017</p>
             </p>
-            <a href="#gallery">Reviews</a>
+            <a href="/reviews">Reviews</a>
           </div>
           <div className="hero-images2">
             <img src={painter} className="hero-painter" alt="painter" />
           </div>
-        <section className="hero3">
-          <h2>Services</h2>
-          <p>
-            At Speedy Gonzalez, we take pride in the craftmenship of our
-            employees. Each individual in our team is carefully screened and
-            trained in order to gaurantee our clients a higher standard of
-            quality. Our employees are true specialist in their field and are
-            required to have a minimum of four years experience in their craft.
-          </p>
-          <div className=" hero-introduction3 flex">
-            <div className="landing-carpentry">
-              <img src={framing} alt="stack-of-drywall" />
-              <h1>Carpentry & Framing</h1>
+          <section className="hero3">
+            <h2>Services</h2>
+            <p>
+              At Speedy Gonzalez, we take pride in the craftmenship of our
+              employees. Each individual in our team is carefully screened and
+              trained in order to gaurantee our clients a higher standard of
+              quality. Our employees are true specialist in their field and are
+              required to have a minimum of four years experience in their
+              craft.
+            </p>
+            <div className=" hero-introduction3 flex ">
+              <div className="card-container">
+                <div className="landing-carpentry flex">
+                  <img src={framing} alt="stack-of-drywall" />
+                  <h1>Carpentry & Framing</h1>
+                </div>
+                <span className="landing-carpentry2 flex">
+                  {/* <span> */}
+                  <ul>
+                    <li>New additions</li>
+                    <li>Soffits</li>
+                    <li>Basements</li>
+                    <li>Walls & partitions</li>
+                    <li>Window installation</li>
+                    <li>Door installation</li>
+                    <li>Casing & moldings</li>
+                    <li>Wood staining</li>
+                  </ul>
+                </span>
+              </div>
+              <div className="card-container">
+                <div className="landing-drywall">
+                  <img src={drywall} alt="stack-of-drywall" />
+                  <h1>Drywall & Taping</h1>
+                </div>
+                <span className="landing-drywall2">
+                  <ul>
+                    <li>Plastering</li>
+                    <li>Taping</li>
+                    <li>Sanding</li>
+                    <li>Skim coating</li>
+                    <li>Hole repairs</li>
+                    <li>Wallpaper removal</li>
+                    <li>Water damage treatment</li>
+                    <li></li>
+                  </ul>
+                </span>
+              </div>
+              <div className="card-container">
+                <div className="landing-painting">
+                  <img src={paintSupplies} alt="stack-of-drywall" />
+
+                  <h1>Painting & Finishing</h1>
+                </div>{' '}
+                <span className="landing-painting2">
+                  <ul>
+                    <li>Interior & exterior</li>
+                    <li>Priming</li>
+                    <li>Caulking & Prep</li>
+                    <li>Color matching</li>
+                    <li>Carpentry & wood staining</li>
+                  </ul>
+                </span>
+              </div>{' '}
             </div>
-            <span className="landing-carpentry2">
-              <ul>
-                <li>New additions</li>
-                <li>Soffits</li>
-                <li>Basements</li>
-                <li>Walls & partitions</li>
-                <li>Window installation</li>
-                <li>Door installation</li>
-                <li>Casing & moldings</li>
-                <li>Wood staining</li>
 
-              </ul>
-            </span>
-            <div className="landing-drywall">
-              <img src={drywall} alt="stack-of-drywall" />
-              <h1>Drywall & Taping</h1>
-            </div>
-            <span className="landing-drywall2">
-              <ul>
-                <li>Plastering</li>
-                <li>Taping</li>
-                <li>Sanding</li>
-                <li>Skim coating</li>
-                <li>Hole repairs</li>
-                <li>Wallpaper removal</li>
-                <li>Water damage treatment</li>
-                <li></li>
-              </ul>
-            </span>
-            <div className="landing-painting">
-              <img src={paintSupplies} alt="stack-of-drywall" />
-
-              <h1>Painting & Finishing</h1>
-            </div>{' '}
-            <span className="landing-painting2">
-              <ul>
-                <li>Interior & exterior</li>
-                <li>Priming</li>
-                <li>Caulking & Prep</li>
-                <li>Color matching</li>
-                <li>Carpentry & wood staining</li>
-              </ul>
-            </span>
-          </div>
-
-          <a href="/services">Services</a>
-        </section>
+            <a href="/services">Services</a>
+          </section>
         </section>
       </main>
 

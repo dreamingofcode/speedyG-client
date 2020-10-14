@@ -1,63 +1,91 @@
 import React, { useState } from 'react';
 import nextArrow from '../icons/nextArrow.png';
 import drywall from '../icons/drywall2.png';
+import drywall1 from '../icons/drywall1.png';
+import drywall3 from '../icons/drywall3.png';
+import tapingKnife from '../icons/tapingKnife.png';
+
 import paintSupplies from '../icons/paintSupplies.png';
 import framing from '../icons/framing.png';
+// import framing1 from '../icons/framing1.png';
+import framing2 from '../icons/framing2.png';
+import varnish from '../icons/varnish.png';
+import molding from '../icons/molding.png';
+import door from '../icons/door.png';
 
 function ImageSlider(props) {
-  const [frameCount, setFrameCount] = useState(0);
-  const [drywallCount, setDrywallCount] = useState(0);
-  const [paintCount, setPaintCount] = useState(0);
+  let [frameCount, setFrameCount] = useState(0);
+  let [drywallCount, setDrywallCount] = useState(0);
+  let [paintCount, setPaintCount] = useState(0);
   const { section } = props;
   const sectionImages = {
-    drywall: [drywall],
-    frame: [framing],
+    drywall: [drywall,"hi", drywall1, "it",drywall3,"works", tapingKnife],
+    frame: [framing,"What We Offer", framing2,"New additions: Walls, Partitions, Windows, Doors", varnish,"we", molding,"made", door],
     paint: [paintSupplies],
   };
   console.log(sectionImages.section);
 
   const setSlider = (e) => {
-    let type = e.target.name;
-    if (type === 'next-frame') {
-    } else if (type === 'prev-frame') {
+    let slider = e.target.name;
+    let type = slider.split('-')[0];
+    let section = slider.split('-')[1];
+    if (type === 'next') {
+      if (section === 'frame' && frameCount != sectionImages.frame.length - 2) {
+        setFrameCount((frameCount += 2));
+      }
+      if (
+        section === 'drywall' &&
+        drywallCount != sectionImages.drywall.length - 2
+      ) {
+        setDrywallCount((drywallCount += 2));
+      }
+      if (section === 'paint' && paintCount != sectionImages.paint.length - 2) {
+        setPaintCount((paintCount += 2));
+      }
+    } else if (type === 'prev') {
+      if (section === 'frame' && frameCount != 0) {
+        setFrameCount((frameCount -= 2));
+      }
+      if (section === 'drywall' && drywallCount != 0) {
+        setDrywallCount((drywallCount -= 2));
+      }
+      if (section === 'paint' && paintCount != 0) {
+        setPaintCount((paintCount -= 2));
+      }
     }
+    console.log(
+      'drywall',
+      drywallCount,
+      'frame',
+      frameCount,
+      'paint',
+      paintCount,
+      sectionImages.frame.length
+    );
   };
-  {
-    /* <div className="service-images">
-          {' '}
-          <img
-            src={nextArrow}
-            alt="previous-arrow"
-            name="prev-frame"
-            className="previous-arrow"
-          />{' '}
-          <h3>
-            Framing & Carpentry
-            <img src={framing} alt="stack-of-drywall" />{' '}
-          </h3>
-          <img
-            src={nextArrow}
-            alt="next-arrow"
-            name="next-frame"
-            className="next-arrow"
-          />
-        </div> */
-  }
+
   return (
     <div className="service-images">
       {section === 'Framing & Carpentry' ? (
-        <div className="service-images">
-          <img
-            src={nextArrow}
-            alt="previous-arrow"
-            name="prev-frame"
-            className="previous-arrow"
-          />
-          <h3>
+        <div>
+          {frameCount !== 0 ? (
+            <img
+              src={nextArrow}
+              alt="previous-arrow"
+              name="prev-frame"
+              onClick={(e) => setSlider(e)}
+              className="previous-arrow"
+            />
+          ) : null}
+          <h4>
             {' '}
-            {section}
-            <img src={sectionImages.frame[frameCount]} alt="frame-diagram" />{' '}
-          </h3>
+            {sectionImages.frame[frameCount+1]}
+            <img
+              src={sectionImages.frame[frameCount]}
+              alt="frame-diagram"
+              className="slider-image"
+              />{' '}
+          </h4>
           <img
             src={nextArrow}
             alt="next-arrow"
@@ -69,18 +97,23 @@ function ImageSlider(props) {
       ) : null}
 
       {section === 'Drywall & Taping' ? (
-        <div className="service-images">
+        <div>
           <img
             src={nextArrow}
             alt="previous-arrow"
             name="prev-drywall"
+            onClick={(e) => setSlider(e)}
             className="previous-arrow"
           />
-          <h3>
+          <h4>
             {' '}
             {section}
-            <img src={sectionImages.drywall[drywallCount]} alt="stack-of-drywall" />{' '}
-          </h3>
+            <img
+              src={sectionImages.drywall[drywallCount]}
+              className="slider-image"
+              alt="stack-of-drywall"
+            />{' '}
+          </h4>
           <img
             src={nextArrow}
             alt="next-arrow"
@@ -91,17 +124,18 @@ function ImageSlider(props) {
         </div>
       ) : null}
       {section === 'Painting & Finishing' ? (
-      <div className="service-images">
+        <div>
           <img
             src={nextArrow}
             alt="previous-arrow"
             name="prev-paint"
+            onClick={(e) => setSlider(e)}
             className="previous-arrow"
-            />
+          />
           <h3>
             {' '}
             {section}
-          <img src={sectionImages.paint[0]} alt="stack-of-drywall" />
+            <img src={sectionImages.paint[paintCount]}  className="slider-image" alt="stack-of-drywall" />
           </h3>
           <img
             src={nextArrow}
