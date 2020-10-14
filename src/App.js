@@ -3,6 +3,7 @@ import { Route, Switch } from 'react-router-dom';
 import LandingPage from './components/landingpage';
 import About from './components/about'
 import Services from './components/services';
+import Reviews from './components/reviews'
 import logoHorizontal from './icons/logoHorizontal.png';
 import './style.css';
 
@@ -30,7 +31,7 @@ function App() {
                 <a href="/services ">Services</a>
               </li>
               <li>
-                <a href="#reviews">Reviews</a>
+                <a href="/reviews">Reviews</a>
               </li>
               <li>
                 <a href="#account">Account</a>
@@ -49,6 +50,7 @@ function App() {
           <Route exact path="/" component={LandingPage} />
           <Route exact path="/about" component={About} />
           <Route exact path="/services" component={Services} />
+          <Route exact path="/reviews" component={Reviews} />
         </Switch>
       </body>
     </div>

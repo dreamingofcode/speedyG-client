@@ -15,15 +15,15 @@ function Services() {
     <div className="services">
       <h2>Services</h2>
       <div className=" services-card flex">
-        <div className="landing-carpentry">
+        <div className="">
           <img src={framingIcon} alt="stack-of-drywall" />
           <h1>Carpentry & Framing</h1>
         </div>
-        <div className="landing-drywall">
+        <div className="">
           <img src={drywallIcon} alt="stack-of-drywall" />
           <h1>Drywall & Taping</h1>
         </div>
-        <div className="landing-painting">
+        <div className="">
           <img src={paintingIcon} alt="stack-of-drywall" />
           <h1>Painting & Finishing</h1>
         </div>{' '}
