@@ -1,4 +1,5 @@
 import React from 'react';
+import ReviewSlider from './reviewSlider'
 import mansTools from '../icons/manTools.png';
 function reviews() {
   return (
@@ -12,16 +13,10 @@ function reviews() {
       </section>
       <div className="hero">
         <div className=" review-introduction flex">
-          <h1>Want to Know what it is like working with us?</h1>
-          <h2>Read our Most recent customer reviews</h2>
-            <br/>
-            <br/>
-            <br/>
-            <br/>
-            <h1>Are you a recent customer?</h1>
-          <button>Write a Review!</button>
+          <h1>Read our Most Recent Customer Reviews</h1> 
         </div>
       </div>{' '}
+      <ReviewSlider/>
     </div>
   );
 }
