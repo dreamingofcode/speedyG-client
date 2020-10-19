@@ -1,85 +1,74 @@
 import React from 'react';
 import RaisedButton from 'material-ui/RaisedButton';
 import MuiThemeProvider from 'material-ui/styles/MuiThemeProvider';
+import reviewData from './reviewData';
+import ReviewCard from './reviewCard';
+class ReviewSlider extends React.Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      reviewProperties: reviewData.properties,
+      property: reviewData.properties[0],
+    };
+  }
+  nextProperty = () => {
+    const newIndex = this.state.property.index + 1;
+    const zodiac = reviewData.properties[newIndex];
+    // this.props.selectedZodiac(zodiac);
+    this.setState({
+      property: reviewData.properties[newIndex],
+    });
+  };
+  prevProperty = () => {
+    console.log('this', this.state.property);
+    const newIndex = this.state.property.index - 1;
+    this.setState({
+      property: reviewData.properties[newIndex],
+    });
+  };
+  render() {
+    return (
+      <div>
+        <MuiThemeProvider>
+          <div className="slider1 ">
 
-function ReviewSlider() {
-  return (
-    <div>
-      <MuiThemeProvider>
-        <h1>SLIDER</h1>
-        <div className="slider1 ">
-          <RaisedButton
-            label=" Next"
-            primary={true}
-            style={styles.button}
-            onClick={() => nextProperty()}
-            disabled={property.index === 11}
-          />
-          <RaisedButton
-            label="Prev"
-            primary={true}
-            style={styles.button}
-            onClick={() => prevProperty()}
-            disabled={property.index === 0}
-          />
-
-          <div className="row my-roww">
-            <div className="col">
-              <div className={`cards-slider active-slide-${property.index}`}>
+            <div className="row my-roww">
+              <div className="col">
                 <div
-                  className="cards-slider-wrapper"
-                  style={{
-                    transform: `translateX(-${
-                      property.index * (100 / zodiacProperties.length)
-                    }%)`,
-                  }}
+                  className={`cards-slider active-slide-${this.state.property.index}`}
                 >
-                  {zodiacProperties.map((property) => (
-                    <ZodiacCard key={property.sign} property={property} />
-                  ))}
+                  <div
+                    className="cards-slider-wrapper"
+                    style={{
+                      transform: `translateX(-${
+                        this.state.property.index *
+                        (100 / this.state.reviewProperties.length)
+                      }%)`,
+                    }}
+                  >
+                    {this.state.reviewProperties.map((property) => (
+                      <ReviewCard key={property.sign} property={property} />
+                    ))}
+                  </div>
                 </div>
               </div>
+                      <RaisedButton
+                        label=" Next"
+                        primary={true}
+                        onClick={() => this.nextProperty()}
+                        disabled={this.state.property.index === 11}
+                      />
+                      <RaisedButton
+                        label="Prev"
+                        primary={true}
+                        onClick={() => this.prevProperty()}
+                        disabled={this.state.property.index === 0}
+                      />
             </div>
           </div>
-          <b />
-          <br />
-          <h1>Please Select Partner's Horosocope!</h1>
-
-          <RaisedButton
-            label=" Next"
-            primary={true}
-            style={styles.button}
-            onClick={() => nextProperty2()}
-            disabled={property2.index === 11}
-          />
-          <RaisedButton
-            label="Prev"
-            primary={true}
-            style={styles.button}
-            onClick={() => prevProperty2()}
-            disabled={property2.index === 0}
-          />
-          <div className="row my-roww">
-            <div className="col">
-              <div className={`cards-slider active-slide-${property2.index}`}>
-                <div
-                  className="cards-slider-wrapper"
-                  style={{
-                    transform: `translateX(-${
-                      property2.index * (100 / zodiacProperties.length)
-                    }%)`,
-                  }}
-                >
-                  {zodiacProperties.map((property) => (
-                    <ZodiacCard key={property.sign} property={property} />
-                  ))}
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </MuiThemeProvider>
-    </div>
-  );
+        </MuiThemeProvider>
+      </div>
+    );
+  }
 }
 export default ReviewSlider;
