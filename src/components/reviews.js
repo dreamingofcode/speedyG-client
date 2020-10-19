@@ -1,6 +1,7 @@
 import React from 'react';
-import ReviewSlider from './reviewSlider'
+import ReviewSlider from './reviewSlider';
 import mansTools from '../icons/manTools.png';
+import './reviews.css';
 function reviews() {
   return (
     <div className="reviews-pg">
@@ -13,10 +14,11 @@ function reviews() {
       </section>
       <div className="hero">
         <div className=" review-introduction flex">
-          <h1>Read our Most Recent Customer Reviews</h1> 
+          <h1>Read our Most Recent Customer Reviews</h1>
         </div>
       </div>{' '}
-      <ReviewSlider/>
+      <ReviewSlider />
+      <div className="hero"></div>
     </div>
   );
 }
