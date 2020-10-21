@@ -33,7 +33,7 @@
 
 
 .left {
-  /* background-image: url('./assets/images/lovematch5.jpeg'); */
+  /* background-image: url('../icons/nextArrow.png'); */
   background-repeat: no-repeat;
   background-size: 1000px;
   background-position-x: -50px;
@@ -73,8 +73,8 @@
 }
 .cards-slider-wrapper .card {
   flex: 1;
-  min-width: 200px;
-  opacity: 0.7;
+  min-width: 400px;
+  /* opacity: 0.7; */
   transform: scale(0.8);
   box-shadow: none;
   background-color: white;
@@ -89,7 +89,6 @@
 }
 .card {
   flex: 1;
-  min-width: 200px;
 
   opacity: 0.5;
   transform: scale(0.7);
@@ -103,8 +102,7 @@
   cursor: pointer;
   background-color: #f3f3f3;
   padding: 10px;
-  max-width: 420px;
-  /* text-align: left; */
+  max-width: 600px;
   margin: 0 auto;
 }
 .cards-slider {
@@ -133,16 +131,15 @@
   display: block;
   width: 40%;
   height: 166%;
-  background: linear-gradient(to right, white 15%, rgba(255, 255, 255, 0) 100%);
+  /* background: linear-gradient(to right, white 15%, rgba(255, 255, 255, 0) 100%); */
   position: absolute;
   top: 0;
   left: 0;
-  z-index: 2;
+  /* z-index: 2; */
 }
 .col:after {
   left: auto;
   right: 0;
-  background: linear-gradient(to left, white 15%, rgba(255, 255, 255, 0) 100%);
 }
 .cards-slider.active-slide-0 #card-0 {
   opacity: 1.5;
