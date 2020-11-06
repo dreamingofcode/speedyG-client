@@ -27,6 +27,8 @@ html {
   --header4: calc(2.4rem + 1vw);
   --text: calc(1.5rem + 1vw);
   --big: calc(6rem + 1vw);
+  --bigger: calc(15rem + 1vw);
+  
   --special-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
@@ -51,8 +53,7 @@ h2 {
 h3 {
   font-size: var(--header3);
 }
-h4,
-h5 {
+h4{
   font-size: var(--header4);
 }
 
@@ -504,65 +505,7 @@ nav {
   overflow: hidden;
 }
 
-/* REVIEWS */
-.reviews-pg {
-  position: relative;
-  min-height: 200vh;
-  background: linear-gradient(#dad1d4, #59c65b);
-  text-align: center;
-}
-.reviews-pg section {
-  background-color: #2b2b2b;
-  position: relative;
-  height: auto;
-  max-height: 80vh;
-  display: flex;
-  text-align: center;
-}
-.reviews-pg section img {
-  height: auto;
-  overflow: hidden;
-  object-fit: cover;
-}
-.reviews-pg section h1,
-.reviews-pg section h2 ,.review-introduction h1{
-  margin: auto;
-  position: relative;
-  width: 90%;
-  font-size: 5rem;
-  text-shadow: -1px 0 black, 0 6px black, 1px 0 black, 0 -1px black;
-  color: white;
-}
-.reviews-pg section h2 {
-  font-family: var(--stencil-font);
-  font-size: 8rem;
-}
-.reviews-pg .hero-txt {
-  margin: auto;
-}
-.review-introduction{
-  flex: 40rem 2 1;
-  max-height: 50rem;
-  background: url("./icons/paintingStrips.png");
-  background-size:cover;
-  background-repeat: no-repeat;
-  background-position: right 35% top -45%;
-  background-color: #dad8dd;
 
-}
-.review-introduction h1{
-  position: relative;
-margin-top: 7rem;
-  font-size: 7rem;
-}
-
-.reviews{
-  flex: 1 1 40rem;
-  display: flex;
-  flex-wrap: wrap;
-  overflow: hidden;
-  background: url("./icons/paintingStrips.png")
-}
 /* Gallery */
 .gallery {
   display: grid;
@@ -599,15 +542,17 @@ margin-top: 7rem;
   min-height: 90vh;
   display: flex;
   flex-wrap: wrap;
+  background: #dad1d4;
 }
 .form-wrapper {
   flex: 3 1 40rem;
 }
 .form-wrapper h2 {
   margin: 5rem 0rem;
-}
-.form-wrapper span {
   font-size: var(--big);
+}
+.form-wrapper h2 span {
+  font-size: var(--bigger);
   color: var(--special-color);
 }
 .form-wrapper label {
@@ -616,7 +561,7 @@ margin-top: 7rem;
 .form-wrapper input {
   display: block;
   margin: 3rem 0rem;
-  background: var(--background-color);
+  background: white;
   color: white;
   border: none;
   padding: 1rem;
@@ -651,7 +596,10 @@ footer h4 {
   flex: 3 1 40rem;
   font-size: calc(1.4rem + 1vw);
 }
-
+footer img{
+  height: 60px;
+  color: aliceblue;
+}
 button:focus {
   background: var(--background-color);
   color: white;

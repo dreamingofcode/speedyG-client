@@ -4,6 +4,8 @@ import logo from '../icons/logo.png';
 import drywall from '../icons/drywall2.png';
 import paintSupplies from '../icons/paintSupplies.png';
 import framing from '../icons/framing.png';
+import contactImage from '../icons/contactImage.png'
+
 import '../style.css';
 
 function LandingPage() {
@@ -123,8 +125,26 @@ function LandingPage() {
           </section>
         </section>
       </main>
+      <section className="contact">
+        <div className="form-wrapper flex">
+          <h2>Get In<br/> 
+          <span>Touch!</span></h2>
+          <form>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required/> 
+            
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required/>
 
-      <h1></h1>
+            <label for="message">What is your Message?</label>
+            <textarea rows="4" cols="50" type="text" id="message" required/>
+
+            <button type="submit">Submit</button>
+            <img src={contactImage} alt="speedy-member"/>
+          </form>
+        </div>
+      </section>
+    
     </div>
   );
 }
