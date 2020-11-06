@@ -16,12 +16,12 @@ const ReviewCard = ({ property }) => {
         <span className="index">{index + 1}</span>
       <div className="details">
         <section>
-        <h4>
-          {date}
-        </h4>
+        <h5>{client} from {location}
+        </h5>
+          
         </section>
-        <p>"{comment}" </p>
-        <p>-{client} </p>
+        <h6>"{comment}" </h6>
+        <h6>-{date}</h6>
       </div>
     </div>
   );

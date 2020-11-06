@@ -1,5 +1,7 @@
 import React, { Fragment } from 'react';
 import frank from '../images/frank.png';
+import contactImage from '../icons/contactImage.png'
+
 import logo from '../icons/logo.png';
 function About() {
   return (
@@ -75,6 +77,25 @@ function About() {
           <p>Checo</p>
           <img src={frank} alt="franks-headshot" />
           <img src={frank} alt="franks-headshot" />
+        </div>
+      </section>
+      <section className="contact">
+        <div className="form-wrapper flex">
+          <h2>Get In<br/> 
+          <span>Touch!</span></h2>
+          <form>
+            <label for="email">Your Email</label>
+            <input type="email" id="email" required/> 
+            
+            <label for="name">Your Name</label>
+            <input type="text" id="name" required/>
+
+            <label for="message">What is your Message?</label>
+            <textarea rows="4" cols="50" type="text" id="message" required/>
+
+            <button type="submit">Submit</button>
+            <img src={contactImage} alt="speedy-member"/>
+          </form>
         </div>
       </section>
     </Fragment>

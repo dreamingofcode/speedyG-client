@@ -5,6 +5,10 @@ import About from './components/about'
 import Services from './components/services';
 import Reviews from './components/reviews'
 import logoHorizontal from './icons/logoHorizontal.png';
+import contactImage from './icons/contactImage.png'
+import email from './icons/email.png'
+import telephone from './icons/telephone.png'
+import yelp from './icons/yelp.png'
 import './style.css';
 
 function App() {
@@ -53,6 +57,15 @@ function App() {
           <Route exact path="/reviews" component={Reviews} />
         </Switch>
       </body>
+      
+      <footer>
+        <h4>Speedy Gonzalez Drywall &copy;2020</h4>
+        <ul>
+          <li><a href="mailto:speedygpainting@gmail.com" target="blank"><img src={email}/></a></li>
+          <li><a href="tel:1-773-216-4434"><img src={telephone}/></a></li>
+          <li><a href="#"><img src={yelp} style={{height:"90px"}}/></a></li>
+        </ul>
+      </footer>
     </div>
   );
 }
