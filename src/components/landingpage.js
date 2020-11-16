@@ -18,14 +18,14 @@ function LandingPage() {
             <img src={logo} alt="company-logo" className="hero-logo" />
             {/* <h2>Speedy Gonzalez <br/>Drywall & Taping Inc.</h2> */}
             <p>
-              With 7 years of operation, Speedy Gonzalez is a reputable
+              With close to 15 years of operation, Speedy Gonzalez is a reputable
               commercial and residential construction company especializing in
               both drywall and painting treatments. Our team is committed to a
               high standard of quality and integrity through both our
               incomparable services and devotion. Take a look and see for
               yourself why Speedy Gonzalez is sought after time and time again.
             </p>
-            <a href="#gallery">Gallery</a>
+            <a className="button-black" href="#gallery">Gallery</a>
           </div>
         </section>
         <section className="hero2">
@@ -50,7 +50,7 @@ function LandingPage() {
               Bernardo is a perfectionist...""
               <p>-Ross U. 03/29/2017</p>
             </p>
-            <a href="/reviews">Reviews</a>
+            <a className="button-white" href="/reviews">Reviews</a>
           </div>
           <div className="hero-images2">
             <img src={painter} className="hero-painter" alt="painter" />
@@ -72,7 +72,6 @@ function LandingPage() {
                   <h1>Carpentry & Framing</h1>
                 </div>
                 <span className="landing-carpentry2 flex">
-                  {/* <span> */}
                   <ul>
                     <li>New additions</li>
                     <li>Soffits</li>
@@ -81,7 +80,6 @@ function LandingPage() {
                     <li>Window installation</li>
                     <li>Door installation</li>
                     <li>Casing & moldings</li>
-                    <li>Wood staining</li>
                   </ul>
                 </span>
               </div>
@@ -92,13 +90,13 @@ function LandingPage() {
                 </div>
                 <span className="landing-drywall2">
                   <ul>
-                    <li>Plastering</li>
                     <li>Taping</li>
+                    <li>Plastering</li>
                     <li>Sanding</li>
                     <li>Skim coating</li>
-                    <li>Hole repairs</li>
+                    <li>Drywall repairs</li>
                     <li>Wallpaper removal</li>
-                    <li>Water damage treatment</li>
+                    <li>Water damages</li>
                     <li></li>
                   </ul>
                 </span>
@@ -111,8 +109,9 @@ function LandingPage() {
                 </div>{' '}
                 <span className="landing-painting2">
                   <ul>
-                    <li>Interior & exterior</li>
                     <li>Priming</li>
+                    <li>Interior & exterior</li>
+                    <li>Stains & Mold</li>
                     <li>Caulking & Prep</li>
                     <li>Color matching</li>
                     <li>Carpentry & wood staining</li>
@@ -121,7 +120,7 @@ function LandingPage() {
               </div>{' '}
             </div>
 
-            <a href="/services">Services</a>
+            <a className="button-black" href="/services">Services</a>
           </section>
         </section>
       </main>
@@ -130,19 +129,19 @@ function LandingPage() {
           <h2>Get In<br/> 
           <span>Touch!</span></h2>
           <form>
-            <label for="email">Your Email</label>
+            <label htmlFor="email">Your Email</label>
             <input type="email" id="email" required/> 
             
-            <label for="name">Your Name</label>
+            <label htmlFor="name">Your Name</label>
             <input type="text" id="name" required/>
 
-            <label for="message">What is your Message?</label>
+            <label htmlFor="message">What is your Message?</label>
             <textarea rows="4" cols="50" type="text" id="message" required/>
 
             <button type="submit">Submit</button>
-            <img src={contactImage} alt="speedy-member"/>
           </form>
         </div>
+            <img src={contactImage} alt="speedy-member"/>
       </section>
     
     </div>

@@ -25,10 +25,10 @@ html {
   --header2: calc(3.5rem + 1vw);
   --header3: calc(3rem + 1vw);
   --header4: calc(2.4rem + 1vw);
-  --text: calc(1.5rem + 1vw);
+  --text: calc(1.7rem + 1vw);
   --big: calc(6rem + 1vw);
   --bigger: calc(15rem + 1vw);
-  
+
   --special-color: #906272;
   --background-color: #414141;
   --gray-text: #525252;
@@ -45,7 +45,34 @@ label,
 input,
 a,
 p {
+  color: black;
   font-size: var(--text);
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+.button-black {
+  color: black;
+  padding: 2rem 8rem;
+  border: black 3px solid;
+  margin-bottom: 4rem;
+}
+.button-black:hover {
+  color: white;
+  background-color: black;
+}
+.button-white {
+  color: white;
+  padding: 2rem 8rem;
+  border: 3px solid white;
+  margin-bottom: 4rem;
+}
+.button-white:hover {
+  color: black;
+  background-color: white;
+}
+
+li:hover,
+a:hover {
+  text-decoration: none;
 }
 h2 {
   font-size: var(--header2);
@@ -53,17 +80,14 @@ h2 {
 h3 {
   font-size: var(--header3);
 }
-h4{
+h4 {
   font-size: var(--header4);
 }
 
 ul {
   list-style: none;
 }
-a {
-  text-decoration: none;
-  color: black;
-}
+
 .flex {
   display: flex;
   flex-direction: column;
@@ -133,20 +157,21 @@ nav {
   background: #2b2b2b;
   color: white;
 }
+.hero-introduction2 p {
+  color: white;
+}
 .hero-introduction p {
   padding: 5rem 10rem;
   color: var(--gray-text);
 }
 .hero-introduction h2,
-.hero-introduction2 h2 {
+.hero-introduction2 h2,
+.about-text h2,
+.about-text2 h2 {
   padding-top: 3rem;
+  font-size: 7rem;
+
   font-family: var(--stencil-font);
-}
-.hero-introduction a,
-.hero-introduction3 a {
-  padding: 2rem 8rem;
-  border: black 3px solid;
-  margin-bottom: 4rem;
 }
 
 .hero-images {
@@ -165,23 +190,20 @@ nav {
   position: relative;
   z-index: 1;
 }
-.hero2 a,
-.hero3 a {
-  padding: 2rem 8rem;
-  color: white;
-  border: 3px solid white;
-}
 
 .hero3 {
   min-height: 160vh;
   margin: auto;
   flex-wrap: wrap;
   overflow: hidden;
-  background: linear-gradient(#59c65b, #2b2b2b);
+  background: linear-gradient(#59c65b, #dad1d4);
+
+  /* background: linear-gradient(#59c65b, #2b2b2b); */
   text-align: center;
 }
 .hero-introduction3 {
   min-height: 90vh;
+  height: fit-content;
   flex-direction: row;
 }
 .card-container {
@@ -195,8 +217,8 @@ nav {
 .services-card div {
   background: #f7f7f7;
   display: flex;
-  width: 300px;
-  height: 400px;
+  /* width: 300px; */
+  /* height: 400px; */
   flex-direction: column;
   flex-wrap: wrap;
   margin: 5rem;
@@ -229,6 +251,7 @@ nav {
 .card-container span {
   width: 300px;
   height: 400px;
+
   justify-content: center;
   align-items: center;
 }
@@ -327,7 +350,7 @@ nav {
   flex-wrap: wrap;
 }
 .about-text {
-  color: white;
+  /* color: white; */
   background: #59c65b;
   flex: 2 1 40rem;
   justify-content: space-around;
@@ -338,6 +361,9 @@ nav {
   flex: 2 1 40rem;
   justify-content: space-around;
 }
+.about-text2 p {
+  color: white;
+}
 .about-text div,
 .about-text2 div {
   padding: 3rem 8rem;
@@ -347,10 +373,8 @@ nav {
   padding: 2rem 0rem;
   font-family: 'Ruhl Medium';
 }
-.about-text h2,
-.about-text2 h2 {
-  font-family: 'Vibes';
-  padding: 4rem;
+.about img {
+  height: 300px;
 }
 .about-image {
   flex: 1 1 40rem;
@@ -360,18 +384,24 @@ nav {
   background-size: cover;
   background-repeat: no-repeat;
 }
+
+.about-image1 img{
+  border-radius: 100%;
+  
+}
 .about-image2 {
-  flex: 1 1 40rem;
+  flex: 1 1 60rem;
   position: relative;
-  background: #dad1d4;
+  background: #dad8dd;
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   text-align: center;
+  
 }
 .about-image2 img {
-  border-radius: 100%;
-  width: 180px;
+
+  min-width: 180px;
   height: 180px;
   margin: 2rem;
   image-rendering: optimizeSpeed;
@@ -505,7 +535,6 @@ nav {
   overflow: hidden;
 }
 
-
 /* Gallery */
 .gallery {
   display: grid;
@@ -596,7 +625,7 @@ footer h4 {
   flex: 3 1 40rem;
   font-size: calc(1.4rem + 1vw);
 }
-footer img{
+footer img {
   height: 60px;
   color: aliceblue;
 }
@@ -627,7 +656,11 @@ input:focus {
   .card-container .landing-carpentry,
   .card-container .landing-drywall,
   .card-container .landing-painting {
-    width: 500px;
+    width: 300px;
+  }
+  .hero3 a {
+    border-bottom: black 3px solid;
+    margin-bottom: 4rem;
   }
   /* BURGER THING */
   .burger {
